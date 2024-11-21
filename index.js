@@ -207,11 +207,16 @@ async function run() {
     });
 
 
-    // Certificates
+    // // Certificates
+    // app.get('/certificates', async (req, res) => {
+    //   const result = await certificatesCollection.find().toArray()
+    //   res.send(result)
+    // });
     app.get('/certificates', async (req, res) => {
-      const result = await certificatesCollection.find().toArray()
-      res.send(result)
+      const result = await certificatesCollection.find().toArray();
+      res.send(result);
     });
+    
 
     //add Certificates in db
     app.post("/certificates", async (req, res) => {
